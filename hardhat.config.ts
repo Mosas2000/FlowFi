@@ -16,11 +16,9 @@ const config: HardhatUserConfig = {
     },
     networks: {
         mantleTestnet: {
-            url: "https://rpc.testnet.mantle.xyz",
+            url: "https://rpc.sepolia.mantle.xyz",
             chainId: 5003,
-            accounts: process.env.PRIVATE_KEY !== undefined && process.env.PRIVATE_KEY !== "your_private_key_here"
-                ? [process.env.PRIVATE_KEY]
-                : [],
+            accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
         },
     },
     paths: {
